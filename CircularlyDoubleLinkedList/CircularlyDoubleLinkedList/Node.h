@@ -7,6 +7,9 @@ using namespace std;
 class Node
 {
 public:
+	Node();
+	~Node();
+
 	shared_ptr<Node> getNext();
 	void setNext(shared_ptr<Node>);
 
@@ -18,6 +21,6 @@ public:
 private:
 	shared_ptr<Node> nextNode;
 	shared_ptr<Node> prevNode;
-	DataObject data;
+	shared_ptr<DataObject> dataObj;
 };
 
